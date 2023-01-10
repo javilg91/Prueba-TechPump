@@ -1,0 +1,348 @@
+@font-face {
+  font-family: Liberator Siroko;
+  src: url('/src/fonts/LiberatorSIROKO-Heavy.ttf');
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+}
+
+@media (max-width: 500px) {
+  .content {
+    padding: 0 25px;
+  }
+}
+
+nav {
+  margin: 50px 0 25px 0;
+  display: flex;
+  align-items: center;
+
+  .logo-responsive {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .logo {
+      display: none;
+    }
+
+    .logo-responsive {
+      display: block;
+    }
+  }
+}
+
+main {
+  .pasos {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 7px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 11px;
+    font-family: inter;
+
+    text-transform: uppercase;
+
+    color: #2c5e5b;
+    background: #5dc2bd;
+    border-radius: 3px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  h2,
+  p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 117%;
+
+    color: #ffffff;
+  }
+  .titulo {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 35px;
+    margin: 15px 0;
+
+    display: flex;
+    align-items: flex-end;
+    font-family: Liberator Siroko;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: Inconsolata;
+  }
+
+  .introduccion {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 137%;
+    text-transform: uppercase;
+    font-family: inter;
+    color: #efe5c3;
+    margin: 0 0 10px 0;
+  }
+
+  #form-card {
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 25px;
+    color: white;
+    background: #311429;
+    border-radius: 3px;
+    max-width: 940px;
+
+    label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 12px 0 12px 10px;
+      gap: 10px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 4px;
+      font-family: inconsolata;
+      font-size: 15px;
+      font-weight: 400;
+
+      input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      input + span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 999px;
+        border: 2px solid white;
+      }
+
+      .span-checked {
+        display: none;
+        height: 12px;
+        width: 12px;
+        background-color: white;
+        padding: 0;
+        border-radius: 999px;
+      }
+      input:checked + span > .span-checked {
+        display: block;
+      }
+    }
+
+    label:has(input:checked) {
+      background: rgba(201, 47, 88, 1);
+    }
+
+    label:hover {
+      background-color: rgba(201, 47, 88, 1);
+    }
+
+    label input {
+      margin-left: 12px;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label + label {
+    margin-top: 10px;
+  }
+
+  .radio-button {
+    background-color: transparent !important;
+    border: 2px solid white;
+  }
+
+  .boton-formulario {
+    background: #339b95;
+    border-radius: 4px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 117%;
+    color: white;
+    padding: 12px 0;
+    margin-top: 10px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inter;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+  .boton-formulario:hover {
+    background-color: rgb(123, 49, 49);
+    transition-duration: 0.2;
+  }
+
+  .codigo-caja {
+    padding: 17px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(270deg, #ffffff 0%, #bdbdbd 100%);
+    border-radius: 2px;
+
+    #codigo {
+      color: black;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 117%;
+      margin: 0;
+    }
+
+    .boton-copiar {
+      display: inline-flex;
+      font-weight: 700;
+      font-size: 14px;
+      background-color: transparent;
+      border: 2px solid black;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      cursor: pointer;
+      padding: 3px 8px;
+      font-family: inconsolata;
+    }
+
+    .boton-copiar:hover {
+      background-color: rgb(216, 202, 202);
+      transition-duration: 0.2s;
+    }
+  }
+
+  .codigo-descripcion {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 117%;
+    font-family: inconsolata;
+    margin: 10px 0;
+  }
+
+  .color-caducado {
+    background-color: rgba(197, 20, 20, 1);
+  }
+
+  .color-activo {
+    background-color: rgba(44, 12, 35, 1);
+  }
+
+  .codigo-caducado {
+    border-radius: 3px;
+    padding: 10px 15px 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 117%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .boton-reiniciar {
+      background-color: transparent;
+      color: white;
+      border: 0;
+      text-decoration: none;
+      font-family: inconsolata;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0;
+    }
+  }
+
+  .codigo-caducado-mensaje {
+    display: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+  .codigo-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .contador {
+    margin: 0 10px;
+    font-size: 27px;
+    font-weight: 700;
+  }
+}
+
+footer {
+  background-color: black;
+  padding: 35px;
+  color: rgba(187, 187, 187, 1);
+  font-family: Inconsolata;
+  font-size: 14px;
+
+  a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    padding: 25px;
+  }
+}

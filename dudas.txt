@@ -1,0 +1,9 @@
+- [x] SR only a los inputs
+- [x] poner bien los checkbox
+- [ ] poner el background del label con js
+- [x] poner bien los values de los inputs
+- [x] poner los 20 minutos antes de entregar
+- [x] codigo caducado responsive
+- [x] centrar el reiniciar (align-items: center al padre)
+- [x] poner toast al copiar
+- [ ] 
